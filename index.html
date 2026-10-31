@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ckb" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff4f7">
+<title>Sophya~wanan ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap');
+:root{--pink:#e98eaa;--deep:#9c526f;--ink:#493744;--cream:#fff9f7}
+*{box-sizing:border-box}body{margin:0;font-family:'Noto Sans Arabic',sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%,#ffe1eb 0,transparent 30%),linear-gradient(135deg,#fff9f7,#fcecf2);min-height:100vh}
+main{width:min(760px,92%);margin:0 auto;padding:38px 0 60px}.top{text-align:center;padding:26px 18px 30px}.spark{font-size:26px;color:var(--pink);letter-spacing:8px}.brand{font-family:Georgia,serif;font-size:clamp(36px,8vw,58px);color:var(--deep);margin:10px 0}.sub{color:#936d7d;font-size:14px}.panel{background:#ffffffd9;border:1px solid #f4d5df;border-radius:26px;padding:24px;margin:18px 0;box-shadow:0 12px 35px #9e60751a}.welcome{text-align:center}.welcome h1{font-size:25px;margin:0 0 12px;color:var(--deep)}.welcome p{line-height:2;margin:7px 0}.heart{color:#d9799a}.section-title{font-size:20px;color:var(--deep);margin:0 0 8px}.hint{font-size:13px;color:#967b87;margin:0 0 16px}.questions{display:grid;gap:10px}.q{width:100%;text-align:right;border:1px solid #f0d2dc;background:#fff8fa;color:var(--ink);padding:14px 16px;border-radius:15px;font:inherit;cursor:pointer;transition:.2s}.q:hover,.q:focus{background:#ffedf3;border-color:var(--pink);outline:none}.answer{display:none;margin-top:14px;padding:15px;border-radius:15px;background:#fff0f5;line-height:1.9;color:#75495d}.answer.show{display:block}.ask{display:flex;gap:9px;margin-top:12px}.ask input{min-width:0;flex:1;border:1px solid #edcbd7;border-radius:14px;padding:13px;font:inherit;background:white;outline-color:var(--pink)}.ask button{border:0;border-radius:14px;background:var(--deep);color:white;padding:0 18px;font:inherit;cursor:pointer}.note{font-size:12px;color:#987e89;line-height:1.8;margin-top:12px}.footer{text-align:center;color:#a17e8c;font-size:13px;padding:18px}.footer span{color:#d9799a}@media(max-width:480px){.panel{padding:19px}.ask{flex-direction:column}.ask button{padding:11px}}
+</style>
+</head>
+<body>
+<main>
+<header class="top"><div class="spark">✧ ♡ ✧</div><div class="brand">Sophya~wanan</div><div class="sub">a little place made with love</div></header>
+<section class="panel welcome">
+<h1>بەخێربێیت سەروان <span class="heart">♡</span></h1>
+<p>شاکیژ ئەم شوێنەی بۆ تۆ دروست کردووە.</p>
+<p>لێرە دەتوانیت پرسیار لەبارەی شاکیژ بکەیت و زیاتر بیناسیت.</p>
+<div class="heart" style="font-size:22px;margin-top:8px">♡</div>
+</section>
+<section class="panel">
+<h2 class="section-title">چەند پرسیارێک بۆ دەستپێکردن؟</h2>
+<p class="hint">هەر پرسیارێک هەڵبژێرە بۆ بینینی وەڵامەکە.</p>
+<div class="questions" id="questions">
+<button class="q" data-answer="شاکیژ حەزی لە زمانی کوردییە و حەز دەکات بە زمانی سادە و جوان قسە بکات.">شاکیژ حەزی لە چییە؟</button>
+<button class="q" data-answer="شاکیژ حەزی لە درامای کۆری و چیرۆکە جوانەکانە.">کام جۆرە درامایەکی پێ خۆشە؟</button>
+<button class="q" data-answer="شاکیژ حەز دەکات فێرببێت و هەموو ڕۆژێک شتێکی نوێ فێربێت.">شاکیژ چۆن کەسێکە؟</button>
+<button class="q" data-answer="ئەگەر پرسیارێکی تایبەتت هەیە، باشترە ڕاستەوخۆ لە شاکیژ بپرسیت؛ چونکە تەنها ئەو دەتوانێت وەڵامی ڕاست بداتەوە.">ئەگەر پرسیارێکی ترم هەبوو چی؟</button>
+</div>
+<div class="answer" id="answer" role="status"></div>
+</section>
+<section class="panel">
+<h2 class="section-title">پرسیاری خۆت بنووسە <span class="heart">♡</span></h2>
+<p class="hint">پرسیارەکەت بنووسە؛ ئەم پەڕەیە بۆ ناردنی پرسیارەکەیە، وەڵامەکە لە شاکیژ وەردەگریت.</p>
+<form class="ask" id="askForm"><input id="questionInput" maxlength="180" placeholder="پرسیارەکەت لێرە بنووسە..." required><button type="submit">ناردن ♡</button></form>
+<div class="answer" id="sent" role="status"></div>
+<p class="note">تێبینی: ئەم وێبسایتە وەڵامی پرسیارە نوێیەکان بۆ شاکیژ نانێرێت؛ دەتوانیت پرسیارەکەت کۆپی بکەیت و بۆی بینێریت.</p>
+</section>
+<footer class="footer">دروستکراوە بە <span>♡</span> لەلایەن شاکیژەوە</footer>
+</main>
+<script>
+document.querySelectorAll('.q').forEach(btn=>btn.addEventListener('click',()=>{const box=document.getElementById('answer');box.textContent=btn.dataset.answer;box.classList.add('show')}));
+document.getElementById('askForm').addEventListener('submit',e=>{e.preventDefault();const input=document.getElementById('questionInput');const value=input.value.trim();if(!value)return;const box=document.getElementById('sent');box.textContent='پرسیارەکەت: «'+value+'» — ئێستا دەتوانیت کۆپی بکەیت و بۆ شاکیژ بینێریت.';box.classList.add('show');if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(value).catch(()=>{});input.value=''});
+</script>
+</body>
+</html>
